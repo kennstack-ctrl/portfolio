@@ -1,0 +1,267 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --base: #4c2365;
+  --primary: #7f5d99;
+  --contrast: #c4a4da;
+  --dark: #180d20;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
+  background: var(--dark);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar {
+  width: 100%;
+  padding: 22px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(24, 13, 32, 0.92);
+  position: relative;
+  z-index: 2;
+}
+
+.brand {
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--contrast);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--contrast);
+}
+
+.hero {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 8%;
+  text-align: center;
+  background:
+    linear-gradient(rgba(24, 13, 32, 0.78), rgba(24, 13, 32, 0.92)),
+    url("https://teamgene5.wordpress.com/wp-content/uploads/2026/11/yes.jpg?w=1024")
+    center / cover no-repeat;
+}
+
+.hero-content {
+  max-width: 780px;
+}
+
+.team-logo {
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+  margin-bottom: 25px;
+}
+
+.eyebrow {
+  color: var(--contrast);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.hero h1,
+.about-section h1,
+.profile-card h1 {
+  font-size: clamp(32px, 6vw, 58px);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: var(--contrast);
+}
+
+.intro,
+.section-description {
+  max-width: 680px;
+  margin: 0 auto 25px;
+  color: #ded2e6;
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+.hero h3 {
+  font-size: 16px;
+  color: var(--contrast);
+  margin-bottom: 30px;
+}
+
+.main-button {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid var(--contrast);
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.main-button:hover {
+  background: var(--contrast);
+  color: var(--dark);
+}
+
+.about-section {
+  min-height: calc(100vh - 130px);
+  padding: 85px 8%;
+  text-align: center;
+}
+
+.about-section h1 {
+  margin-bottom: 15px;
+}
+
+.team-grid {
+  max-width: 1150px;
+  margin: 55px auto 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.member-card {
+  display: block;
+  padding: 15px;
+  border: 1px solid rgba(196, 164, 218, 0.25);
+  border-radius: 12px;
+  background: rgba(127, 93, 153, 0.12);
+  transition: 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--contrast);
+  background: rgba(127, 93, 153, 0.3);
+}
+
+.member-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+}
+
+.member-card h2 {
+  font-size: 19px;
+  margin: 18px 0 8px;
+}
+
+.member-card span {
+  font-size: 12px;
+  color: var(--contrast);
+}
+
+.profile-section {
+  min-height: calc(100vh - 130px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 35px;
+  border: 1px solid rgba(196, 164, 218, 0.3);
+  border-radius: 15px;
+  background: rgba(127, 93, 153, 0.12);
+}
+
+.profile-card img {
+  width: 230px;
+  height: 260px;
+  object-fit: contain;
+  margin-bottom: 25px;
+}
+
+.profile-card h1 {
+  font-size: 38px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #b9a9c4;
+  font-size: 11px;
+  background: #120a18;
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-card img {
+    height: 320px;
+  }
+
+  .about-section {
+    padding: 60px 6%;
+  }
+
+  .profile-card {
+    padding: 25px 15px;
+  }
+}
